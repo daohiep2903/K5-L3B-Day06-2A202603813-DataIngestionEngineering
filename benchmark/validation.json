@@ -1,0 +1,12 @@
+{
+  "question_count": 20,
+  "dev": 15,
+  "test": 5,
+  "filter_questions": 4,
+  "source_sha256": "d0ce08ce059a3b7248cec4fe7184ed39e51095ef17d8a35e481a4f10326598be",
+  "benchmark_sha256": "c12a2d999a7d0f3b2e7862ee26f531c56fcdc3bf69eea8523bde3980c978ea85",
+  "exact_evidence_verified": true,
+  "complete_unit_containment_verified": true,
+  "retrieval_experiments_run": false,
+  "review_status": "AI-authored and checked against local text; student review pending. No independent human audit claimed."
+}

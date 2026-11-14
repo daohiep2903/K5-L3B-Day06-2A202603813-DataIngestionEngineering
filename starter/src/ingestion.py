@@ -1,16 +1,22 @@
-"""Read and normalize source data. TODO: implement functions."""
-from pathlib import Path
+"""Document extraction with explicit empty-page warnings."""
+import logging
+import re
+import unicodedata
 from .models import DocumentPage
 
 
-def load_pdf(path: Path, document_id: str, source: str) -> list[DocumentPage]:
-    """TODO: extract each physical page; keep its page number and source.
-
-    Detect and record pages with no text. OCR, when needed, is a separate step.
-    """
-    raise NotImplementedError("TODO: load_pdf")
+def normalize_text(text):
+    text = unicodedata.normalize("NFC", text).replace("\r\n", "\n").replace("\r", "\n")
+    text = re.sub(r"[^\S\n]+", " ", text)
+    return re.sub(r"\n[ \t]*\n(?:[ \t]*\n)+", "\n\n", text).strip()
 
 
-def normalize_text(text: str) -> str:
-    """TODO: normalize Unicode and whitespace without discarding useful structure."""
-    raise NotImplementedError("TODO: normalize_text")
+def load_pdf(path, document_id, source):
+    from pypdf import PdfReader
+    pages = []
+    for number, page in enumerate(PdfReader(path).pages, 1):
+        text = normalize_text(page.extract_text() or "")
+        if not text:
+            logging.warning("Empty PDF page: %s page %s; OCR may be required", source, number)
+        pages.append(DocumentPage(document_id, source, number, text))
+    return pages

@@ -1,0 +1,52 @@
+{
+  "status": "Student confirmed checking and accepting AI-assisted audit on 2026-11-14; not an independent blind review",
+  "strategies": {
+    "A": {
+      "coherence_ai_mean": 1.4,
+      "coherence_n": 10,
+      "grounding_ai_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 5
+      },
+      "grounding_ai_mean": 2.0,
+      "metadata_programmatic_correct": 15,
+      "metadata_n": 15,
+      "filter_compliance_count": 0,
+      "filter_n": 2
+    },
+    "B": {
+      "coherence_ai_mean": 1.9,
+      "coherence_n": 10,
+      "grounding_ai_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 5
+      },
+      "grounding_ai_mean": 2.0,
+      "metadata_programmatic_correct": 15,
+      "metadata_n": 15,
+      "filter_compliance_count": 1,
+      "filter_n": 2
+    },
+    "C": {
+      "coherence_ai_mean": 1.9,
+      "coherence_n": 10,
+      "grounding_ai_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 5
+      },
+      "grounding_ai_mean": 2.0,
+      "metadata_programmatic_correct": 15,
+      "metadata_n": 15,
+      "filter_compliance_count": 2,
+      "filter_n": 2
+    }
+  },
+  "student_confirmation_file": "results/student_audit_confirmation.json",
+  "manual_review_files": [
+    "results/coherence_manual_review.jsonl",
+    "results/test_manual_review.jsonl"
+  ]
+}

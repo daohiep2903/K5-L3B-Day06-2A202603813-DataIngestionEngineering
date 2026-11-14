@@ -1,0 +1,259 @@
+{
+  "reviewer": "AI",
+  "timing": "post-run review; not independent human validation",
+  "benchmark_sha256": "c12a2d999a7d0f3b2e7862ee26f531c56fcdc3bf69eea8523bde3980c978ea85",
+  "questions_reviewed": 20,
+  "answers_supported": 20,
+  "annotation_issues": 4,
+  "reviews": [
+    {
+      "id": "q01",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 2.2 explicitly states both non-secret status and prohibition on authentication with the identifier alone.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q02",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 2.3 prohibits more than one authentication method per request; at most one preserves that wording.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q03",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 2.3.1 requires HTTP Basic support specifically for clients issued a client password; the question retains this condition.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q04",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 2.3.1 restricts these credential parameters to the body and prohibits the request URI. The source also discourages this method; the answer concerns placement only.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q05",
+      "expected_answer_supported": true,
+      "status": "gold_annotation_issue",
+      "reason": "Primary section 2.3.1 evidence supports brute-force protection for client-password authentication. Alternative section 4.3.2 concerns resource-owner password credentials and is a different authentication context.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q06",
+      "expected_answer_supported": true,
+      "status": "gold_annotation_issue",
+      "reason": "Primary section 3.1 evidence supports the authorization endpoint rule. Alternatives 3.1.2 and 3.2 concern redirect and token endpoints, respectively, so they are not evidence about the endpoint named in the question.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q07",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 3.2 explicitly requires POST for access token requests.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q08",
+      "expected_answer_supported": true,
+      "status": "gold_annotation_issue",
+      "reason": "Section 4.1.2 recommends a maximum code lifetime of ten minutes. It is RECOMMENDED, not a universal MUST. The extracted quote ends in an incomplete following sentence; the answer-bearing recommendation itself is complete.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q09",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 4.2.2 prohibits refresh tokens; its heading and surrounding context establish the implicit grant.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q10",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 4.3.1 requires discarding resource-owner credentials once an access token is obtained.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q11",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 4.4 restricts the client credentials grant to confidential clients.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q12",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 5.1 specifies both Cache-Control: no-store and Pragma: no-cache for sensitive responses.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q13",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 5.2 defines invalid_grant and explicitly includes expired or revoked grants and refresh tokens.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q14",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 6 requires discarding and replacing the old token when a new refresh token is issued; this condition is present in the question.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q15",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 7.1 prohibits using a token whose type the client does not understand.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q16",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 2.2 leaves size undefined and says clients should avoid identifier-size assumptions.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q17",
+      "expected_answer_supported": true,
+      "status": "gold_annotation_issue",
+      "reason": "Primary section 3.1 evidence prohibits duplicate authorization request parameters. Alternative section 3.2 is about token endpoint requests and does not by itself establish the authorization endpoint rule.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q18",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 6 explicitly requires identical scope when a replacement refresh token is issued.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q19",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 7 explicitly states validation, expiration and scope checks by the resource server, distinct from authorization server client authentication.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    },
+    {
+      "id": "q20",
+      "expected_answer_supported": true,
+      "status": "pass",
+      "reason": "Section 5.1 explicitly requires ignoring unrecognized response value names.",
+      "reviewer": "AI",
+      "method": "Direct reading of question, answer, all quoted alternatives and source context; exact source offsets also verified.",
+      "student_personally_confirmed": false
+    }
+  ],
+  "sensitivity_analysis": {
+    "method": "Reuse original retrieval traces; remove context-inappropriate alternative golds for q05, q06, q17 only. q08 incomplete quote left unchanged.",
+    "metrics": [
+      {
+        "strategy": "A",
+        "split": "dev",
+        "n": 15,
+        "hit1_count": 7,
+        "hit3_count": 8,
+        "hit1": 0.4666666666666667,
+        "hit3": 0.5333333333333333
+      },
+      {
+        "strategy": "A",
+        "split": "test",
+        "n": 5,
+        "hit1_count": 2,
+        "hit3_count": 3,
+        "hit1": 0.4,
+        "hit3": 0.6
+      },
+      {
+        "strategy": "B",
+        "split": "dev",
+        "n": 15,
+        "hit1_count": 7,
+        "hit3_count": 11,
+        "hit1": 0.4666666666666667,
+        "hit3": 0.7333333333333333
+      },
+      {
+        "strategy": "B",
+        "split": "test",
+        "n": 5,
+        "hit1_count": 4,
+        "hit3_count": 5,
+        "hit1": 0.8,
+        "hit3": 1.0
+      },
+      {
+        "strategy": "C",
+        "split": "dev",
+        "n": 15,
+        "hit1_count": 7,
+        "hit3_count": 11,
+        "hit1": 0.4666666666666667,
+        "hit3": 0.7333333333333333
+      },
+      {
+        "strategy": "C",
+        "split": "test",
+        "n": 5,
+        "hit1_count": 4,
+        "hit3_count": 5,
+        "hit1": 0.8,
+        "hit3": 1.0
+      }
+    ]
+  },
+  "student_acknowledgment": {
+    "student_name": "Đào Văn Hiệp",
+    "student_id": "2A202603813",
+    "date": "2026-11-14",
+    "scope": "Gold review of 20 benchmark questions, including the four annotation findings and unchanged sensitivity metrics",
+    "status": "accepted_ai_review",
+    "statement": "tôi ghi nhận giống bạn",
+    "basis": "Student expressed agreement in conversation; no independent source-by-source human audit is asserted.",
+    "review_performed_by": "AI"
+  }
+}

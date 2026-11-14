@@ -1,16 +1,21 @@
-"""TODO: evaluate retrieved evidence and preserve per-query traces."""
-from typing import Any
+"""Evidence retrieval metrics, independent of human audit labels."""
+from collections import defaultdict
 
 
-def evaluate_query(question: dict[str, Any], hits: list[dict[str, Any]]) -> dict[str, Any]:
-    """TODO: check source/page and enough gold evidence; keep hit@1 and hit@3 trace.
+def evaluate_query(question, hits):
+    golds = question.get("gold_evidence", [question])
+    def match(hit):
+        return any(hit["document_id"] == gold["gold_source_id"] and hit["page"] == gold["gold_page"]
+                   and " ".join(gold["evidence_quote"].split()) in " ".join(hit["text"].split()) for gold in golds)
+    labels = [match(hit) for hit in hits[:3]]
+    return dict(question, hits=hits[:3], evidence_hits=labels, hit1=bool(labels and labels[0]), hit3=any(labels))
 
-    Accept any documented alternative gold evidence. Do not infer human grounding
-    or chunk coherence labels from exact string match.
-    """
-    raise NotImplementedError("TODO: evaluate_query")
 
-
-def summarize(traces: list[dict[str, Any]]) -> dict[str, Any]:
-    """TODO: aggregate Hit@1 and Evidence Hit@3 by strategy and dev/test split."""
-    raise NotImplementedError("TODO: summarize")
+def summarize(traces):
+    groups = defaultdict(list)
+    for trace in traces:
+        groups[(trace["strategy"], trace["split"])].append(trace)
+    return [{"strategy": strategy, "split": split, "n": len(rows),
+             "hit1_count": sum(r["hit1"] for r in rows), "hit3_count": sum(r["hit3"] for r in rows),
+             "hit1": sum(r["hit1"] for r in rows)/len(rows), "hit3": sum(r["hit3"] for r in rows)/len(rows)}
+            for (strategy, split), rows in sorted(groups.items())]

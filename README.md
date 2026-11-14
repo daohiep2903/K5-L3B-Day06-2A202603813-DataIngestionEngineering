@@ -1,5 +1,11 @@
 # Day 06 · Data Ingestion Engineering
 
+## Bài thực hiện của Đào Văn Hiệp — 2A202603813 — L3B
+
+Đã chạy ba cấu hình trên RFC 6749 mục 2–7, với embedding local thật và Qdrant local lưu trên đĩa. Xem [hướng dẫn chạy](starter/RUN_CORPUS.md), [kết quả đo](results/SUMMARY.md) và [báo cáo cá nhân](report/individual/2A202603813_DaoVanHiep.md). Corpus gồm 41 đơn vị nguồn, benchmark 15 dev / 5 test. B được chọn trên dev trước khi chạy test.
+
+Học viên đã xác nhận kiểm tra và đồng ý các nhãn coherence, grounding và metadata có AI hỗ trợ; xem [hồ sơ audit](results/AUDIT_REVIEW.md) và [xác nhận](results/student_audit_confirmation.json). Đã đối chiếu điều kiện chia sẻ trích đoạn tại [hồ sơ quyền sử dụng](data/RIGHTS_REVIEW.md); cần giữ ghi nguồn và thông báo đi kèm corpus/trace. Repo bài nộp và commit chốt cần được học viên hoàn thiện. Model, vector store local, môi trường Python và tệp tạm được loại khỏi Git; hướng dẫn có cách tải lại model đúng revision.
+
 **Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
 
 Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.

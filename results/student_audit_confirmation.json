@@ -1,0 +1,10 @@
+{
+  "student_name": "Đào Văn Hiệp",
+  "student_id": "2A202603813",
+  "date": "2026-11-14",
+  "scope": "30 coherence cases, 15 test grounding cases and 45 metadata records in results/AUDIT_REVIEW.md",
+  "statement": "đã kiểm tra",
+  "status": "student_checked_and_accepted_existing_scores_and_reasons",
+  "ai_assistance_disclosed": true,
+  "basis": "Student explicitly confirmed checking the audit in conversation. Scores and reasons are retained without changes."
+}

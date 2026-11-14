@@ -1,0 +1,43 @@
+{
+  "source_sha256": "d0ce08ce059a3b7248cec4fe7184ed39e51095ef17d8a35e481a4f10326598be",
+  "benchmark_sha256": "c12a2d999a7d0f3b2e7862ee26f531c56fcdc3bf69eea8523bde3980c978ea85",
+  "code_sha256": "2097b640b7ed3106925e02397857e0d55ee686c018078416e8946da953d8f06c",
+  "model": "local_models/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "backend": "qdrant",
+  "chunk_stats": {
+    "A": {
+      "chunk_count": 182,
+      "characters": 74271,
+      "min_length": 54,
+      "max_length": 500
+    },
+    "B": {
+      "chunk_count": 116,
+      "characters": 69222,
+      "min_length": 154,
+      "max_length": 992
+    },
+    "C": {
+      "chunk_count": 116,
+      "characters": 69222,
+      "min_length": 154,
+      "max_length": 992
+    }
+  },
+  "completed_at_utc": "2026-11-13T08:42:01.213642+00:00",
+  "dimensions": 384,
+  "ingest_seconds_including_reingest": {
+    "A": 8.230197700002464,
+    "B": 6.564199300002656,
+    "C": 1.3138439999966067
+  },
+  "provider": "local sentence-transformers",
+  "service_cost": 0,
+  "search": "exact cosine",
+  "packages": {
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "qdrant-client": "1.20.0"
+  }
+}

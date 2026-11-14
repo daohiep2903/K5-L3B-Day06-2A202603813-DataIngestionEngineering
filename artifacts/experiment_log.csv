@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed,500,50,document_id;source;page;top_level_section;offsets,none,all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41,Fixed-size baseline,7/15,8/15,2/5,3/5,Measured real local embeddings/Qdrant; all numbered headings shared boundaries; human audit pending; B/C two truncated chunks
+B,paragraph,1000,0,document_id;source;page;top_level_section;offsets,none,all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41,Paragraph boundaries may preserve evidence,7/15,11/15,4/5,5/5,Measured real local embeddings/Qdrant; all numbered headings shared boundaries; human audit pending; B/C two truncated chunks
+C,paragraph,1000,0,document_id;source;page;top_level_section;offsets,question-supplied top_level_section,all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41,Explicit section filters may reduce ambiguity,7/15,11/15,4/5,5/5,Measured real local embeddings/Qdrant; all numbered headings shared boundaries; human audit pending; B/C two truncated chunks

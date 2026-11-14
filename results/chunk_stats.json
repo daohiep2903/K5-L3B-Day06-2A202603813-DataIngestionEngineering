@@ -1,0 +1,20 @@
+{
+  "A": {
+    "chunk_count": 182,
+    "characters": 74271,
+    "min_length": 54,
+    "max_length": 500
+  },
+  "B": {
+    "chunk_count": 116,
+    "characters": 69222,
+    "min_length": 154,
+    "max_length": 992
+  },
+  "C": {
+    "chunk_count": 116,
+    "characters": 69222,
+    "min_length": 154,
+    "max_length": 992
+  }
+}
